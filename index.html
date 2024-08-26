@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio using Html and Css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="left">
+        <div class="profile-image">
+            <img src="WhatsAppImage3.jpg" alt="Profile Image">
+        </div>
+        <header>
+            <h2 class="logo"><span>『A』</span>bhishek</h2>
+            <nav class="navigation">
+                <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="#"><i class="fa-regular fa-address-card"></i>About</a>
+                <a href="#"><i class="fa-solid fa-briefcase"></i>Portfolio</a>
+                <a href="#"><i class="fa-solid fa-blog"></i>Blog</a>
+            </nav>
+            <a href="#" class="btn-talk" id="contactMeBtn">Contact Me!</a>
+            <div id="contactInfo">
+              <span id="closeContactInfo">&times;</span>
+              <h3>Contact Information</h3>
+              <p>Email: abhishek050ig@gmail.com</p>
+              <p>Phone: +91-9956442672</p>
+          </div>
+          <script>
+              const contactMeBtn = document.getElementById('contactMeBtn');
+              const contactInfo = document.getElementById('contactInfo');
+              const closeContactInfo = document.getElementById('closeContactInfo');
+              const projectsBtn = document.getElementById('projectsBtn');
+              const modal = document.getElementById('projectsModal');
+              const closeModal = document.getElementById('closeModal');
+      
+              contactMeBtn.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  contactInfo.classList.toggle('show');
+              });
+      
+              closeContactInfo.addEventListener('click', function() {
+                  contactInfo.classList.remove('show');
+              });
+
+              projectsBtn.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  modal.classList.add('show');
+              });
+
+              closeModal.addEventListener('click', function() {
+                  modal.classList.remove('show');
+              });
+          </script>
+        </header>
+        <main class="home">
+            <div class="content">
+                <h2>Hi!</h2>
+                <h2>I am <span>Abhishek Kumar</span></h2>
+                <h4>Frontend Developer</h4>
+                <p>Fully Passionated Front-end Developer specializing in HTML/CSS, JavaScript.
+                    Skilled in creating intuitive, user-friendly Websites and Applications.
+                    </p>
+                <div class="btn-group">
+                    <a href="myresume.pdf"><i class="fa-solid fa-file"></i>Resume </a>
+                    <a href="https://github.com/AbhiSourceHUB"><i class="fa-brands fa-github"></i>See Projects</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/abhishek-kumar-5870642bb/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <h3>Landing Page</h3>
+                <img src="WhatsAppimage.jpg" alt="Project 1">
+                <p>This landing page is created by using Html and Css.</p>
+                <a href="https://github.com/AbhiSourceHUB/Landing-Page">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Calculator</h3>
+                <img src="WhatsAppImage1 .jpg" alt="Project 2">
+                <p>This Calculator is created by using Html, Css and Java-Script language.</p>
+                <a href="https://github.com/AbhiSourceHUB/Calculator">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Portfolio</h3>
+                <img src="WhatsAppImage2.jpg" alt="Project 3">
+                <p>This interesting Portfolio is created by basic knowledge of Html and Css language.</p>
+                <a href="project2-link.html">View Project</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <section class="contact-section">
+            <h1>Get in Touch</h1>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </footer>
+    <div class="copyright">
+            &copy; 2024 Abhishek Kumar. All rights reserved.
+    </div>
+</body>
+</html>
